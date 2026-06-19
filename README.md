@@ -62,12 +62,12 @@
   ![标准PSO率定收敛曲线](results/exp1_convergence.png)
 
 * **水文过程线对比**：展示了率定期（最后3年：1987-1989）与完整验证期（1990-2000）的降雨与径流过程线对比。
-  ![率定期水文过程线 (1987-1989)](exp1_hydrograph_cal.png)
-  ![验证期水文过程线 (1990-2000)](exp1_hydrograph_val.png)
+  ![率定期水文过程线 (1987-1989)](results/exp1_hydrograph_cal.png)
+  ![验证期水文过程线 (1990-2000)](results/exp1_hydrograph_val.png)
 
 * **散点图与流量历时曲线**：展示了验证期的拟合优度（R² = 0.5081）和长期水量分布特征。
-  ![验证期实测 vs 模拟散点图](exp1_scatter_val.png)
-  ![验证期流量历时曲线](exp1_fdc_val.png)
+  ![验证期实测 vs 模拟散点图](results/exp1_scatter_val.png)
+  ![验证期流量历时曲线](results/exp1_fdc_val.png)
 
 ---
 
@@ -92,13 +92,13 @@
 ### 3. 自适应机制效果可视化
 
 * **箱线图对比**：展示了4种PSO变体进行10次独立率定运行得到的最终适应度（负NSE）分布。标准PSO、LDWPSO和CFPSO在多次运行中表现出极高的稳定性，全部收敛到相同的最优值；而CLPSO由于引入了向其他粒子维度的学习机制，在相同迭代次数下的收敛精细度略显不足。
-  ![自适应PSO变体比较 - 10次运行箱线图](exp2_boxplot.png)
+  ![自适应PSO变体比较 - 10次运行箱线图](results/exp2_boxplot.png)
 
 * **最佳运行收敛曲线**：展示了4种算法最佳运行的收敛历程。可以看出，标准PSO、LDWPSO 和 CFPSO的收敛速度和精度都非常高，而CLPSO的前期开发速度相对较慢。
-  ![自适应PSO变体比较 - 最佳运行收敛曲线](exp2_convergence.png)
+  ![自适应PSO变体比较 - 最佳运行收敛曲线](results/exp2_convergence.png)
 
 * **验证期水文过程线**：展示了4种算法最佳运行在验证期（1990-2000）的水文模拟效果。
-  ![各算法最佳运行 - 验证期水文过程线](exp2_val_hydrographs.png)
+  ![各算法最佳运行 - 验证期水文过程线](results/exp2_val_hydrographs.png)
 
 ---
 
@@ -121,10 +121,10 @@
 ### 多目标Pareto前沿与模拟效果
 
 * **Pareto前沿图**：展示了率定期的负NSE与水量平衡偏差绝对值（|PBIAS|）之间的二维帕累托解集，高亮标出了距离理想点最近的“拐点（折中解）”。
-  ![Pareto 前沿及拐点](exp3_pareto_front.png)
+  ![Pareto 前沿及拐点](results/exp3_pareto_front.png)
 
 * **代表性解过程线对比**：展示了最佳NSE解、最佳PBIAS解以及折中解在验证期水文过程线上的表现，直观体现了折中解在拟合洪峰和保障长期水量平衡方面的双重优势。
-  ![代表性解的验证期水文过程线](exp3_representative_hydrographs.png)
+  ![代表性解的验证期水文过程线](results/exp3_representative_hydrographs.png)
 
 ---
 
@@ -160,11 +160,11 @@
 ### 4. 算法性能对比可视化
 
 * **箱线图与收敛曲线**：展示了三种优化算法进行10次独立运行的最优适应度分布以及最佳运行的收敛过程。PSO与DE均展现出完美的全局收敛能力（标准差为0.0000），而SA受制于单解搜索，在有限评估次数内无法完全收敛。
-  ![跨算法对比 - 10次运行箱线图](exp4_boxplot.png)
-  ![跨算法对比 - 最佳运行收敛曲线](exp4_convergence.png)
+  ![跨算法对比 - 10次运行箱线图](results/exp4_boxplot.png)
+  ![跨算法对比 - 最佳运行收敛曲线](results/exp4_convergence.png)
 
 * **验证期模拟效果对比**：展示了三种算法率定的最佳参数集在验证期上的水文过程线模拟。
-  ![各算法最佳运行 - 验证期水文过程线](exp4_val_hydrographs.png)
+  ![各算法最佳运行 - 验证期水文过程线](results/exp4_val_hydrographs.png)
 
 ---
 
@@ -197,11 +197,11 @@ c1/c2 平衡关系（均值适应度值，越小越好）：
 ### 4. 超参数敏感性分析图表
 
 * **粒子数量与惯性权重敏感性**：展示了粒子数（在固定评估预算下）以及惯性权重 w 的敏感性变化曲线。
-  ![粒子数量敏感性分析](exp5_particle_sensitivity.png)
-  ![惯性权重 w 敏感性分析](exp5_inertia_sensitivity.png)
+  ![粒子数量敏感性分析](results/exp5_particle_sensitivity.png)
+  ![惯性权重 w 敏感性分析](results/exp5_inertia_sensitivity.png)
 
 * **学习因子 c1/c2 热力图**：展示了自我学习因子 c1 与社会学习因子 c2 不同组合下平均适应度（越小越好）的热力图分布，显示出在对角线附近的优异表现。
-  ![学习因子 c1/c2 敏感性热力图](exp5_c1c2_heatmap.png)
+  ![学习因子 c1/c2 敏感性热力图](results/exp5_c1c2_heatmap.png)
 
 ---
 
